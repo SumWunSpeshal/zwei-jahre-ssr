@@ -2,22 +2,20 @@ import cookie from 'cookie'
 import { v4 as uuid } from '@lukeed/uuid'
 
 export const handle = async ({ event, resolve }) => {
-  const cookies = cookie.parse(event.request.headers.get('cookie') || '')
-  event.locals.userid = cookies.userid || uuid()
+  const basicAuth = event.request.headers.get('authorization')
 
-  const response = await resolve(event)
-
-  if (!cookies.userid) {
-    // if this is the first time the user has visited this app,
-    // set a cookie so that we recognise them when they return
-    response.headers.set(
-      'set-cookie',
-      cookie.serialize('userid', event.locals.userid, {
-        path: '/',
-        httpOnly: true
-      })
-    )
+  if (basicAuth) {
+    const auth = basicAuth.split(' ')[1]
+    const login = Buffer.from(auth, 'base64').toString()
+    if (login === import.meta.env.VITE_BASIC_AUTH) {
+      return resolve(event)
+    }
   }
 
-  return response
+  return new Response('Auth required', {
+    status: 401,
+    headers: {
+      'WWW-Authenticate': 'Basic realm="Secure Area"'
+    }
+  })
 }
