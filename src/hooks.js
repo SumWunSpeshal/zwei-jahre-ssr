@@ -1,5 +1,9 @@
+import { amp, browser, dev, mode, prerendering } from '$app/env'
+
 export const handle = async ({ event, resolve }) => {
   const basicAuth = event.request.headers.get('authorization')
+  console.log('browser', browser)
+  console.log('prerendering', prerendering)
 
   if (basicAuth) {
     const [_, auth] = basicAuth.split(' ')
