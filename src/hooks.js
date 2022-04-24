@@ -1,9 +1,9 @@
 export const handle = async ({ event, resolve }) => {
   const basicAuth = event.request.headers.get('authorization')
 
-  console.log(basicAuth)
+  console.log(import.meta.env.VITE_VERCEL_ENV)
   if (basicAuth) {
-    const auth = basicAuth.split(' ')[1]
+    const [_, auth] = basicAuth.split(' ')
     const login = Buffer.from(auth, 'base64').toString()
     if (login === import.meta.env.VITE_BASIC_AUTH) {
       return resolve(event)
