@@ -1,9 +1,9 @@
-import { prerendering } from '$app/env'
+import { prerendering, amp } from '$app/env'
 
 export const handle = async ({ event, resolve }) => {
   const basicAuth = event.request.headers.get('authorization')
-  
-  if (prerendering) {
+
+  if (prerendering || amp) {
     return resolve(event)
   }
 
