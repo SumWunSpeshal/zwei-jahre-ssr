@@ -1,7 +1,6 @@
 export const handle = async ({ event, resolve }) => {
   const basicAuth = event.request.headers.get('authorization')
 
-  console.log(import.meta.env)
   if (basicAuth) {
     const [_, auth] = basicAuth.split(' ')
     const login = Buffer.from(auth, 'base64').toString()

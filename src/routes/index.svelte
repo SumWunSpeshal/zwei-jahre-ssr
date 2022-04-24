@@ -3,10 +3,7 @@
   import Anchor from '$lib/Anchor.svelte'
   import { resources } from '../lib/stores/resources.js'
 
-  export let sortedResources
-  export let latestMsg
-  export let nextMsg
-  export let msgNo
+  export let sortedResources, latestMsg, nextMsg, msgNo
 
   resources.update(() => sortedResources)
 
