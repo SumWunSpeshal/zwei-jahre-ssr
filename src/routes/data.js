@@ -5,7 +5,7 @@ export const get = async () => {
   const { resources } = await api()
   const sortedResources = sortByDate(resources).reverse()
   const pastMessages = sortedResources.filter(
-    e => new Date(e?.context?.date) < new Date('2021-04-27')
+    e => new Date(e?.context?.date) < new Date()
   )
   const [latestMsg, nextMsg] = sortedResources.slice(pastMessages.length - 1)
   const msgNo = pastMessages.length

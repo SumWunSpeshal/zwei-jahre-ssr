@@ -3,11 +3,12 @@
   "name": "Zwei Jahre",
   "lang": "de",
   "description": "Jahrestagsgeschenk von Sacha für Regina",
-  "start_url": "https://sumwunspeshal.github.io/zweijahre/",
+  "id": "/",
+  "start_url": "/",
   "background_color": "#dadce0",
   "theme_color": "#dadce0",
   "dir": "ltr",
-  "display": "browser",
+  "display": "fullscreen",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -36,45 +37,45 @@
       "sizes": "120x120"
     },
     {
-      "src": "./images/manifest-icons/apple-icon-114x114-dunplab-manifest-9819.png",
+      "src": "./manifest-icons/apple-icon-114x114-dunplab-manifest-9819.png",
       "type": "image/png",
       "sizes": "114x114"
     },
     {
-      "src": "./images/manifest-icons/favicon-96x96-dunplab-manifest-9819.png",
+      "src": "./manifest-icons/favicon-96x96-dunplab-manifest-9819.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "./images/manifest-icons/apple-icon-76x76-dunplab-manifest-9819.png",
+      "src": "./manifest-icons/apple-icon-76x76-dunplab-manifest-9819.png",
       "type": "image/png",
       "sizes": "76x76"
     },
     {
-      "src": "./images/manifest-icons/apple-icon-72x72-dunplab-manifest-9819.png",
+      "src": "./manifest-icons/apple-icon-72x72-dunplab-manifest-9819.png",
       "type": "image/png",
       "sizes": "72x72"
     },
     {
-      "src": "./images/manifest-icons/apple-icon-60x60-dunplab-manifest-9819.png",
+      "src": "./manifest-icons/apple-icon-60x60-dunplab-manifest-9819.png",
       "type": "image/png",
       "sizes": "60x60"
     },
     {
-      "src": "./images/manifest-icons/apple-icon-57x57-dunplab-manifest-9819.png",
+      "src": "./manifest-icons/apple-icon-57x57-dunplab-manifest-9819.png",
       "type": "image/png",
       "sizes": "57x57"
     },
     {
-      "src": "./images/manifest-icons/favicon-32x32-dunplab-manifest-9819.png",
+      "src": "./manifest-icons/favicon-32x32-dunplab-manifest-9819.png",
       "type": "image/png",
       "sizes": "32x32"
     },
     {
-      "src": "./images/manifest-icons/favicon-16x16-dunplab-manifest-9819.png",
+      "src": "./manifest-icons/favicon-16x16-dunplab-manifest-9819.png",
       "type": "image/png",
       "sizes": "16x16"
     }
   ],
-  "prefer_related_applications": "false"
+  "prefer_related_applications": false
 }
