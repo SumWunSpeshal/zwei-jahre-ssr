@@ -16,7 +16,7 @@
   import { resources } from '$lib/stores/resources.js'
 
   export let data
-  resources.update(() => data)
+  resources.set(data)
 </script>
 
 <main class='text-md text-gray-700'>
