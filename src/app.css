@@ -22,6 +22,6 @@
 
 @layer base {
     html {
-        font-family: 'Lato';
+        font-family: 'Lato', system-ui, sans-serif;
     }
 }
